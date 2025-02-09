@@ -27,10 +27,7 @@ Feature: basics
       <?php
       use Doctrine\ORM\EntityRepository;
 
-      /** @extends EntityRepository<Exception> */
-      class UserRepository extends EntityRepository{}
-
-      /** @psalm-var UserRepository $userRepository */
+      /** @psalm-var EntityRepository<Exception> $userRepository */
 
       $qb = $userRepository->createQueryBuilder('o');
 
