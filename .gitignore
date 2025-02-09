@@ -1,5 +1,4 @@
 /vendor/
-composer.lock
 vendor
 .php-version
 .phpunit.result.cache
