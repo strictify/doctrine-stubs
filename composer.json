@@ -1,8 +1,13 @@
 {
-    "name": "strictiy/doctrine-stubs",
+    "name": "strictify/doctrine-stubs",
     "description": "psalm stubs for Doctrine",
     "type": "psalm-plugin",
     "license": "MIT",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "psalm"
+    ],
     "authors": [
         {
             "name": "Bruce Weirdan",
@@ -29,7 +34,7 @@
     },
     "extra": {
         "psalm": {
-            "pluginClass": "Strictify\\DoctrineStubsPsalmPlugin"
+            "pluginClass": "Strictify\\DoctrineStubsPsalmPlugin\\Plugin"
         }
     },
     "autoload": {
@@ -45,10 +50,8 @@
             ]
         }
     },
+
     "scripts": {
-        "post-install-cmd": [
-            "vendor/bin/psalm-plugin enable strictiy/doctrine-stubs"
-        ],
         "check": [
             "@analyze",
             "@cs-check",

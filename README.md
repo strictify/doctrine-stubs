@@ -5,7 +5,7 @@ Add this to your composer.json file
 
 ```json
 "require-dev": {
-    "strictiy/doctrine-stubs": "dev-master"
+    "strictify/doctrine-stubs": "dev-master"
 },
 "repositories": [
     {
