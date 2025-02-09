@@ -7,5 +7,4 @@ namespace Strictify\DoctrineStubsPsalmPlugin\Tests\Helper;
 
 class Acceptance extends \Codeception\Module
 {
-
 }
