@@ -14,7 +14,7 @@ abstract class AbstractQuery
      *
      * @return (
      *    $hydrationMode is self::HYDRATE_OBJECT|null
-     *    ? array<array-key, T>
+     *    ? list<T>
      *    : mixed
      * )
      */

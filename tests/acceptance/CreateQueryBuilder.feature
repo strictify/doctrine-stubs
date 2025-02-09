@@ -44,5 +44,5 @@ Feature: basics
       | Type  | Message                       |
       | Trace | $qb: Doctrine\ORM\QueryBuilder<Exception> |
       | Trace | $query: Doctrine\ORM\Query<Exception> |
-      | Trace | $results: array<array-key, Exception> |
+      | Trace | $results: list<Exception> |
     And I see no other errors

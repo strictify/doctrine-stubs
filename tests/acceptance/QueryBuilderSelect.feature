@@ -46,5 +46,5 @@ Feature: basics
       | Type  | Message                       |
       | Trace | $qb: Doctrine\ORM\QueryBuilder<mixed> |
       | Trace | $query: Doctrine\ORM\Query<mixed> |
-      | Trace | $results: array<array-key, mixed> |
+      | Trace | $results: list<mixed> |
     And I see no other errors

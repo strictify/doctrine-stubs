@@ -2,6 +2,7 @@
 
 namespace Strictify\DoctrineStubsPsalmPlugin;
 
+use Generator;
 use SimpleXMLElement;
 use Psalm\Plugin\PluginEntryPointInterface;
 use Psalm\Plugin\RegistrationInterface;
@@ -21,14 +22,13 @@ class Plugin implements PluginEntryPointInterface
         // null will be passed instead.
     }
 
-    /** @return list<string> */
-    private function getStubFiles(): array
+    /** @return Generator<string> */
+    private function getStubFiles(): Generator
     {
-        $stubs = glob(__DIR__ . '/stubs/*.stubphp');
-        if (false === $stubs) {
-            throw new \RuntimeException('Unable to load stubs.');
-        }
-
-        return $stubs;
+        yield __DIR__ . '/stubs/AbstractQuery.stubphp';
+        yield __DIR__ . '/stubs/Query.stubphp';
+        yield __DIR__ . '/stubs/QueryBuilder.stubphp';
+        yield __DIR__ . '/stubs/EntityRepository.stubphp';
+        yield __DIR__ . '/stubs/ServiceEntityRepositoryProxy.stubphp';
     }
 }
