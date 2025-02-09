@@ -1,6 +1,6 @@
 <?php
 
-namespace Weirdan\PsalmPluginSkeleton;
+namespace Strictify\DoctrineStubsPsalmPlugin;
 
 use SimpleXMLElement;
 use Psalm\Plugin\PluginEntryPointInterface;
@@ -8,19 +8,10 @@ use Psalm\Plugin\RegistrationInterface;
 
 class Plugin implements PluginEntryPointInterface
 {
-    /** @return void */
-    public function __invoke(RegistrationInterface $psalm, ?SimpleXMLElement $config = null): void
+    public function __invoke(RegistrationInterface $registration, ?SimpleXMLElement $config = null): void
     {
-        // This is plugin entry point. You can initialize things you need here,
-        // and hook them into psalm using RegistrationInterface
-        //
-        // Here's some examples:
-        // 1. Add a stub file
-        // ```php
-        // $psalm->addStubFile(__DIR__ . '/stubs/YourStub.php');
-        // ```
         foreach ($this->getStubFiles() as $file) {
-            $psalm->addStubFile($file);
+            $registration->addStubFile($file);
         }
 
         // Psalm allows arbitrary content to be stored under you plugin entry in
@@ -33,6 +24,6 @@ class Plugin implements PluginEntryPointInterface
     /** @return list<string> */
     private function getStubFiles(): array
     {
-        return glob(__DIR__ . '/stubs/*.phpstub') ?: [];
+        return glob(__DIR__ . '/stubs/*.stubphp') ?: [];
     }
 }

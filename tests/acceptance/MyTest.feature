@@ -12,7 +12,7 @@ Feature: basics
           <directory name="."/>
         </projectFiles>
         <plugins>
-          <pluginClass class="Weirdan\PsalmPluginSkeleton\Plugin" />
+          <pluginClass class="Strictify\DoctrineStubsPsalmPlugin\Plugin" />
         </plugins>
       </psalm>
       """
@@ -34,6 +34,5 @@ Feature: basics
     When I run Psalm
     Then I see these errors
       | Type                  | Message                                                                             |
-      | InvalidScalarArgument | /Argument 1 of atan expects float, (string(not a number)\|"not a number") provided/ |
+      | InvalidScalarArgument | /Argument 1 of atan expects float, but 'not a number' provided/ |
     And I see no other errors
-

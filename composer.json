@@ -1,40 +1,44 @@
 {
-    "name": "weirdan/psalm-plugin-skeleton",
-    "description": "Template to create psalm-plugin projects from",
+    "name": "strictiy/doctrine-stubs",
+    "description": "psalm stubs for Doctrine",
     "type": "psalm-plugin",
     "license": "MIT",
     "authors": [
         {
             "name": "Bruce Weirdan",
             "email": "weirdan@gmail.com"
+        },
+        {
+            "name": "Zeljko Mitic",
+            "email": "mitke013@gmail.com"
         }
     ],
     "require": {
-        "vimeo/psalm": "dev-master"
+        "ext-simplexml": "*",
+        "vimeo/psalm": "^5|^6",
+        "doctrine/orm": "^3"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.5",
         "squizlabs/php_codesniffer": "^3.3",
-        "psalm/plugin-phpunit": "^0.16.0",
+        "psalm/plugin-phpunit": "*",
         "weirdan/prophecy-shim": "^2.0",
-        "weirdan/codeception-psalm-module": "^0.13.1",
+        "weirdan/codeception-psalm-module": "dev-master",
         "codeception/codeception": "^4.1"
     },
     "extra": {
         "psalm": {
-            "pluginClass": "Weirdan\\PsalmPluginSkeleton\\Plugin"
+            "pluginClass": "Strictify\\DoctrineStubsPsalmPlugin"
         }
     },
     "autoload": {
         "psr-4": {
-            "Weirdan\\PsalmPluginSkeleton\\": [
-                "."
-            ]
+            "Strictify\\DoctrineStubsPsalmPlugin\\": "."
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Weirdan\\PsalmPluginSkeleton\\Tests\\": [
+            "Strictify\\DoctrineStubsPsalmPlugin\\Tests\\": [
                 "tests/_support",
                 "tests"
             ]
