@@ -22,6 +22,4 @@ class QueryBuilder implements \Stringable
      */
     public function select(mixed ...$select): static
     {}
-
-
 }

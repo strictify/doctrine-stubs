@@ -1,6 +1,6 @@
 <?php
 
-namespace Weirdan\PsalmPluginSkeleton\Tests;
+namespace Strictify\DoctrineStubsPsalmPlugin\Tests;
 
 /**
  * Inherited Methods
