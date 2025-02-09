@@ -20,4 +20,25 @@ class EntityRepository implements ObjectRepository, Selectable
      */
     public function createQueryBuilder(string $alias, string|null $indexBy = null): QueryBuilder
     {}
+
+    /**
+     * @param non-negative-int|null $limit
+     * @param non-negative-int|null $offset
+     *
+     * @return list<T>
+     */
+    public function findBy(array $criteria, array|null $orderBy = null, int|null $limit = null, int|null $offset = null): array;
+
+    /**
+     * @param array<string, mixed> $criteria
+     * @param array<string, string>|null $orderBy
+     *
+     * @return T|null
+     */
+    public function findOneBy(array $criteria, array|null $orderBy = null): object|null;
+
+    /**
+     * @return int<0, max>
+     */
+    public function count(array $criteria = []): int;
 }

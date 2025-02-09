@@ -45,6 +45,9 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "vendor/bin/psalm-plugin enable strictiy/doctrine-stubs"
+        ],
         "check": [
             "@analyze",
             "@cs-check",

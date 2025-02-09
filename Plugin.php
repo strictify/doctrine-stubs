@@ -24,6 +24,11 @@ class Plugin implements PluginEntryPointInterface
     /** @return list<string> */
     private function getStubFiles(): array
     {
-        return glob(__DIR__ . '/stubs/*.stubphp') ?: [];
+        $stubs = glob(__DIR__ . '/stubs/*.stubphp');
+        if (false === $stubs) {
+            throw new \RuntimeException('Unable to load stubs.');
+        }
+
+        return $stubs;
     }
 }
