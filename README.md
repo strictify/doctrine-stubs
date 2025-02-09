@@ -17,7 +17,7 @@ Add this to your composer.json file
 Then run:
 ```text
 composer req strictiy/doctrine-stubs --dev
-vendor/bin/psalm-plugin enable strictiy/doctrine-stubs
+vendor/bin/psalm-plugin enable strictify/doctrine-stubs
 ```
 
 ## Quickstart
