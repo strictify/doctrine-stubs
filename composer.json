@@ -21,7 +21,7 @@
     "require": {
         "php": "^8.2",
         "ext-simplexml": "*",
-        "vimeo/psalm": "^6",
+        "vimeo/psalm": "^6|^7",
         "doctrine/orm": "^2|^3"
     },
     "require-dev": {
